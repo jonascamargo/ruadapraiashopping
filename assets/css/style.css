@@ -702,7 +702,7 @@ main .container {
     background-size: 200px;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 520px) {
     .card.item .wrap {
         flex-wrap: nowrap;
         justify-content: flex-start;
