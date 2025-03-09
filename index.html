@@ -23,22 +23,30 @@
 <body>
 
     <header class="main-header">
-
         <div class="container">
+
             <h1 class="logo-header">
                 <a href="index.html">
                     <img src="assets/imgs/Logo-roxo-p.svg" alt="Rua da Praia - shopping">
                 </a>
             </h1>
 
-            <nav class="main-menu top">
-                <a href="#sobre">O Rua</a>
-                <a href="#blog">Novidades</a>
-                <a href="#lojas">Lojas</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
+            <div class="main-menu top">
+                <div class="wrap">
 
+                    <div class="sandwich-menu"><span></span><span></span><span></span></div>
+                
+                    <nav class="menu-nav">
+                        <a href="#sobre">O Rua</a>
+                        <a href="#blog">Novidades</a>
+                        <a href="#lojas">Lojas</a>
+                        <a href="#contato">Contato</a>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
     </header>
 
     <hr>
@@ -51,7 +59,7 @@
                 <div class="grid-instagram"></div>
 
                 <div class="actions">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Siga-nos no Instagram" class="btn s pink">Nos siga no Instagram<i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Siga-nos no Instagram" class="btn s pink">Nos siga no Instagram <i class="fa-brands fa-instagram"></i></a>
                 </div>
 
             </div>
@@ -61,7 +69,7 @@
         <section class="banner">
             <div class="flex-wrap">
 
-                <div class="box purple">
+                <div class="box img purple">
                     <div class="inner">
 
                         <img src="assets/imgs/Logo RdP + PP.png" alt="Rua da Praia shopping | Ponto Pronto">
@@ -69,7 +77,7 @@
                     </div>
                 </div>
 
-                <div class="box gold">
+                <div class="box info gold">
                     <div class="inner">
 
                         <h2 class="tt m">Desde 1990 o centro passa por aqui</h2>
@@ -90,75 +98,35 @@
             <div class="container">
 
                 <header>
-                    <h2 class="tt b">Lojas</h2>
+                    <h2 class="tt m">Lojas</h2>
                     <p>Moda, tecnologia, beleza e muito mais. Aqui, você encontra variedade para todas as ocasiões.</p>
                 </header>
 
 
                 <ul class="grid-lojas">
 
-                    <li class="loja">
-                        <div class="img">
-                            <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
-                        </div>
+                    <li class="card loja">
+                        <div class="inner">
 
-                        <div class="info">
-                            <h3>Alê Fermino</h3>
-                            <div>Moda e Acessórios</div>
+                            <div class="img">
+                                <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
+                            </div>
+    
+                            <div class="info">
+                                <h3>Alê Fermino</h3>
+                                <span>Moda e Acessórios</span>
+    
+                                <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
+                                <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><sub>51</sub> 9870.7240</a>
+    
+                                <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
+                            </div>
 
-                            <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
-                            <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><span>51</span> 9870.7240</a>
-
-                            <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
-                        </div>
-                    </li>
-
-                    <!-- //////////////// -->
-                    <li class="loja">
-                        <div class="img">
-                            <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
-                        </div>
-
-                        <div class="info">
-                            <h3>Alê Fermino</h3>
-                            <div>Moda e Acessórios</div>
-
-                            <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
-                            <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><span>51</span> 9870.7240</a>
-
-                            <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
                         </div>
                     </li>
-                    <li class="loja">
-                        <div class="img">
-                            <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
-                        </div>
 
-                        <div class="info">
-                            <h3>Alê Fermino</h3>
-                            <div>Moda e Acessórios</div>
-
-                            <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
-                            <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><span>51</span> 9870.7240</a>
-
-                            <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
-                        </div>
-                    </li>
-                    <li class="loja">
-                        <div class="img">
-                            <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
-                        </div>
-
-                        <div class="info">
-                            <h3>Alê Fermino</h3>
-                            <div>Moda e Acessórios</div>
-
-                            <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
-                            <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><span>51</span> 9870.7240</a>
-
-                            <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
-                        </div>
-                    </li>
+                    <!-- //////////////////////////////////////////////////////////////// -->
+                    <!-- //////////////////////////////////////////////////////////////// -->
 
                 </ul>
 
@@ -175,72 +143,73 @@
             <div class="container">
 
                 <header>
-                    <h2 class="tt b">Acontece no Rua</h2>
+                    <h2 class="tt m">Acontece no Rua</h2>
                     <p>Fique por dentro! Acompanhe as últimas novidades, eventos e tendências do Rua da Praia Shopping.</p>
                 </header>
 
                 <ul class="grid-posts">
 
-                    <li class="post">
-                        <a href="posts/rua-da-praia-shopping" class="more">
+                    <li class="card post">
+                        <div class="inner">
 
-                            <div class="img">
+                            <a href="posts/rua-da-praia-shopping" class="more img">
                                 <img src="upload/blog/post-petfriendly.png" alt="post: Rua da Praia Shopping">
-                            </div>
-
+                            </a>
+    
                             <div class="info">
-                                <h3>PETFRIENDLY</h3>
+                                <a href="posts/rua-da-praia-shopping" class="more">
+                                    <h3>PETFRIENDLY</h3>
+                                </a>
                                 <p>Seu pet é muito bem vindo no Rua!</p>
                             </div>
 
-                        </a>
+                        </div>
                     </li>
+
+                    <!-- /////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////// -->
 
                 </ul>
 
-
                 <div class="action">
-                    <a href="#mais-posts" aria-label="Carregar mais posts" class="btn s gold">Carregar mais</a>
+                    <a href="#mais-posts" aria-label="Carregar mais posts" class="btn m gold">Carregar mais</a>
                 </div>
 
             </div>
         </section>
 
 
-        <section id="sobre" class="purple">
+        <section id="sobre" class="purple waves">
             <div class="container">
 
                 <div class="flex-wrap">
                     <div class="box img">
-                        <div class="inner">
-
-                            <img src="assets/imgs/Logo-branco-p.svg" alt="Rua da Praia - shopping">
-
-                        </div>
+                        <img src="assets/imgs/Logo-branco-p.svg" alt="Rua da Praia - shopping">
                     </div>
 
                     <div class="box info">
-                        <header class="inner">
-
+                        <div class="inner">
                             <h2 class="tt b">No coração do Centro Histórico</h2>
 
                             <p>Inaugurado em 1990 pelo Grupo Isdra, o Rua da Praia Shopping é um dos mais tradicionais de Porto Alegre. Localizado junto à Praça da Alfândega, possui quatro andares com diversas lojas de vestuário, calçados, eletrônicos, além de opções gastronômicas e cinema.</p>
-                            
-                            <p>Diariamente, mais de 45 mil pessoas circulam pelo shopping, que tem a Lojas Americanas como âncora e um amplo mix de serviços.</p>
-                        
-                        </header>
+                            <p>Diariamente, mais de 45 mil pessoas circulam pelo shopping, que tem a Lojas Americanas como âncora e um amplo mix de serviços.</p>    
+                        </div>
                     </div>
                 </div>
 
-                <h3>Nossos serviços</h3>
+                <header>
+                    <h3 class="tt m tt-servicos">Nossos serviços</h3>
+                </header>
 
                 <ul class="list-servicos">
 
-                    <li class="item">
-                        <a href="servico/cadeira-de-rodas">
-                            <i class="fa-solid fa-wheelchair"></i>
+                    <li class="card item">
+                        <a href="servico/cadeira-de-rodas" class="wrap">
+                            <div class="img">
+                                <i class="fa-solid fa-wheelchair"></i>
+                            </div>
 
-                            <div>
+                            <div class="info">
                                 <h4>Cadeira de rodas</h4>
                                 <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
                             </div>
@@ -258,7 +227,7 @@
 
                 <div class="box">
                     <header>
-                        <h2 class="tt b">Entre em contato</h2>
+                        <h2 class="tt m">Entre em contato</h2>
                     </header>
     
                     <a href="https://wa.me/5551981640560" class="btn xb"><i class="fa-solid fa-store"></i><span>Seja lojista</span></a>
@@ -280,10 +249,10 @@
 
     <hr>
 
-    <footer id="main-footer" class="purple">
+    <footer id="main-footer" class="purple waves">
         <div class="container">
             
-            <p>© 2025 Rua da Praia Shopping. Todos os direitos reservados.</p>
+            © 2025 <b>Rua da Praia Shopping</b>. Todos os direitos reservados.
             
         </div>
     </footer>
