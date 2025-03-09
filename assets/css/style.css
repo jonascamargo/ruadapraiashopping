@@ -673,17 +673,20 @@ main .container {
     text-decoration: none;
     color: var(--color-purple);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
 .card.item .img {
     font-size: 80px;
     width: 100px;
+    margin-bottom: 20px;
 }
 
 .card.item .info {
-    padding-left: 40px;
+    width: 100%;
 }
 .card.item .info h4 {
     font-size: 22px;
@@ -697,6 +700,20 @@ main .container {
 .card.item:before {
     background-image: url("../imgs/wave-bg-gold-servicos.png");
     background-size: 200px;
+}
+
+@media (min-width: 680px) {
+    .card.item .wrap {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 20px 40px;
+    }
+    .card.item .img {
+        margin-bottom: inherit;
+    }
+    .card.item .info {
+        padding-left: 40px;
+    }
 }
 
 
