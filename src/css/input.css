@@ -1,0 +1,286 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Rosmatika';
+            src: url('../webfonts/RosmatikaRegular.woff2') format('woff2'),
+            url('../webfonts/RosmatikaRegular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@layer components {
+
+    body {
+        background-image: url("../imgs/wave-bg-white-page.png");
+        background-repeat: repeat-y;
+    }
+    
+    /* CARD: BASE PARA ANIMACAO */
+    .card {
+        @apply relative;
+    }
+    .card > div,
+    .card > a {
+        @apply relative z-[5];
+    }
+    .card:hover {
+        @apply z-[10];
+    }
+    .card:after, .card:before {
+        @apply content-[''] absolute left-2/4 top-2/4 w-full h-full -translate-x-2/4 -translate-y-2/4 rounded;
+        @apply transition-[width,height,opacity] duration-200 ease-in;
+    }
+    .card:before {
+        @apply opacity-15;
+    }
+    .card:hover:after, .card:hover:before {
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+    }
+    .card:hover:before {
+        @apply opacity-60;
+    }
+
+
+    /* MENU PRINCIPAL */
+    .main-menu-nav a {
+        @apply font-rosmatika text-xl text-ice leading-[62px] px-5;
+        @apply transition-colors hover:text-gold;
+    }
+
+
+    /* CONTAINER DAS SECOES */
+    main > section {
+        @apply px-5;
+    }
+    main > section > div {
+        @apply py-32 max-w-1xl m-auto;
+    }
+
+
+    /* HEADER SECTION */
+    .header-sec h2 {
+        @apply font-rosmatika text-6xl pb-5;
+    }
+    .header-sec p {
+        @apply font-lato text-xl max-w-xl;
+    }
+    .header-sec p:not(:last-child) {
+        @apply pb-5;
+    }
+
+    
+    /* ///////////////////// LOJAS */
+
+    /* LOJAS: HEADER */
+    #lojas .header-sec {
+        @apply text-purple;
+    }
+
+
+    /* LOJAS: BUSCA */
+    .loja-busca {
+        @apply flex flex-row justify-end pb-10;
+    }
+    .loja-busca > div {
+        @apply bg-purple rounded py-2 px-2 mr-2 flex flex-col md:flex-row gap-2 w-full md:w-2/3 lg:w-1/2;
+    }
+
+    .loja-busca .select {
+        @apply w-auto min-w-[25%];
+    }
+    .loja-busca .select select {
+        @apply w-full h-[48px] outline-none bg-transparent p-2 rounded text-lg text-ice;
+        @apply transition-colors duration-200 ease-in;
+    }
+
+    .loja-busca .input {
+        @apply w-full;
+    }
+    .loja-busca .input input {
+        @apply w-full h-[48px] leading-[48px] outline-none bg-transparent focus:bg-pink p-2 rounded text-lg text-ice;
+        @apply transition-colors duration-200 ease-in;
+    }
+
+    .loja-busca .select select:focus,
+    .loja-busca .input input:focus {
+        @apply bg-pink;
+    }
+
+    .btn-busca {
+        @apply outline-none bg-pink font-rosmatika text-ice text-2xl block leading-[48px] px-5 rounded;
+        @apply transition-shadow duration-200 ease-in;
+    }
+    .btn-busca span {
+        @apply hidden sm:block;
+    }
+    .btn-busca i {
+        @apply sm:hidden;
+    }
+    .btn-busca:hover {
+        @apply shadow-purple-m;
+    }
+
+
+    /* LOJAS: CARD */
+    .card.loja {
+        @apply w-full lg:w-[calc(50%-10px)];
+    }
+
+    .card.loja .wrap {
+        @apply flex flex-col sm:flex-row;
+    }
+
+    .card.loja .img {
+        @apply overflow-hidden rounded relative min-w-72 min-h-72 pb-[100%] sm:pb-0 w-full sm:w-2/5;
+    }
+    .card.loja .img img {
+        @apply w-full h-full absolute object-cover;
+    }
+    
+    .card.loja .info {
+        @apply px-6 py-5;
+    }
+    .card.loja .info h3 {
+        @apply font-lato font-normal text-ice text-3xl;
+    }
+    .card.loja .info p {
+        @apply font-lato text-ice text-sm;
+    }
+    
+    .card.loja .actions {
+        @apply flex flex-col gap-y-3 pt-4;
+    }
+    
+    .card.loja:after {
+        @apply z-[1] bg-purple;
+    }
+    .card.loja:before {
+        @apply z-[2];
+        background-image: url("../imgs/wave-bg-gold-lojas.png");
+        background-size: 220px;
+    }
+    .card.loja:hover:before {
+        @apply shadow-purple-m;
+    }
+
+
+
+    /* ///////////////////// BLOG */
+
+    /* LOJAS: HEADER */
+    #blog .header-sec h2 {
+        @apply text-gold;
+    }
+    #blog .header-sec p {
+        @apply text-goldDark;
+    }
+
+
+    /* POST: CARD */
+    .card.post:after {
+        @apply z-[1] bg-iceLight;
+    }
+    .card.post:before {
+        @apply z-[2];
+        background-image: url("../imgs/wave-bg-pink.png");
+        background-size: 220px;
+    }
+    .card.post:hover:after {
+        @apply bg-gold;
+    }
+    .card.post:hover:before {
+        @apply shadow-purple-m;
+    }
+
+
+
+    /* ///////////////////// SOBRE */
+    #sobre {
+        @apply bg-purple;
+        background-image: url("../imgs/wave-bg-pink.png");
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+    }
+
+
+    /* SOBRE: HEADER */
+    #sobre .header-sec h2 {
+        @apply text-ice;
+    }
+    #sobre .header-sec p {
+        @apply text-ice max-w-none;
+    }
+
+
+    /* SOBRE: SERVICOS */
+    .servicos {
+        @apply  pt-32;
+    }
+    .servicos header {
+        @apply text-center text-ice text-5xl font-rosmatika pb-8;
+    }
+
+
+    /* SERVICOS */
+    .grid-servicos {
+        @apply flex flex-wrap gap-5;
+    }
+
+    /* SERVICOS: CARD */
+    .card.servico {
+        @apply w-full lg:w-[calc(50%-20px)] xl:w-[calc(33.3333%-20px)];
+    }
+    .card.servico a {
+        @apply p-5 flex flex-col sm:flex-row;
+    }
+    .card.servico .img, .card.servico .info {
+        @apply w-full text-center sm:text-left;
+    }
+
+    .card.servico .img {
+        @apply pb-5 sm:pb-0 pr-0 sm:pr-5 sm:w-24;
+    }
+    .card.servico .img i {
+        @apply text-[5.25rem] text-purple block;
+    }
+
+    .card.servico .info h4 {
+        @apply text-xl text-purple font-semibold pb-4;
+    }
+    .card.servico .info p {
+        @apply text-sm text-purple;
+    }
+
+    .card.servico:after {
+        @apply z-[1] bg-ice;
+    }
+    .card.servico:before {
+        @apply z-[2];
+        background-image: url("../imgs/wave-bg-gold-servicos.png");
+        background-size: 220px;
+    }
+    .card.servico:hover:before {
+        @apply shadow-purple-m;
+    }
+
+
+    /* ///////////////////// FOOTER */
+    #main-footer {
+        @apply bg-purple px-3 md:px-5 py-10;
+        background-image: url("../imgs/wave-bg-white-page.png");
+        background-size: 470px;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+    }
+    #main-footer p {
+        @apply font-lato text-ice text-xs text-center tracking-wide;
+    }
+}

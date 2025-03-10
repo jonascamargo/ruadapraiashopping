@@ -4,135 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- PRELOAD -->
-    <link rel="preload" href="assets/css/fontawesome.min.css" as="style">
-    <link rel="preload" href="assets/css/style.css" as="style">
-    <link rel="preload" href="assets/imgs/Logo-roxo-p.svg" as="image">
-
-
-    <title>Rua da Praia - shopping</title>
-
+    <!-- PRELOADER -->
+    <link rel="preload" href="src/css/output.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- FONT -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="src/css/output.css">
+
+    <title>Rua da Praia - Shopping</title>
 </head>
 
 
-<body>
+<body class="bg-ice">
 
-    <header class="main-header">
-        <div class="container">
+    <header id="main-header" class="px-5 py-3 max-w-1xl m-auto">
+        <div class="flex justify-between items-center">
 
-            <h1 class="logo-header">
-                <a href="index.html">
-                    <img src="assets/imgs/Logo-roxo-p.svg" alt="Rua da Praia - shopping">
+            <h1 class="m-0 p-0 max-w-24">
+                <a href="index.html" class="outline-none">
+                    <img src="src/imgs/Logo-roxo-p.svg" alt="logo: Rua da Praia Shopping">
                 </a>
             </h1>
 
-            <div class="main-menu top">
-                <div class="wrap">
+            <div class="">
+                <div class="hidden">
+                    <i class="fa-solid fa-bars"></i>
+                    <!-- <i class="fa-solid fa-bars fa-beat"></i> HOVER -->
 
-                    <div class="sandwich-menu"><span></span><span></span><span></span></div>
-                
-                    <nav class="menu-nav">
-                        <a href="#sobre">O Rua</a>
-                        <a href="#blog">Novidades</a>
-                        <a href="#lojas">Lojas</a>
-                        <a href="#contato">Contato</a>
-                    </nav>
+                    <i class="fa-solid fa-xmark hidden"></i>
+                    <!-- <i class="fa-solid fa-xmark fa-spin"></i> HOVER -->
+                </div>
 
+                <div class="main-menu-nav bg-purple rounded px-3 transition-shadow hover:shadow-purple-b duration-200 ease-in">
+                    <ul class="list-none flex flex-row">
+                        <li><a href="#sobre">O Rua</a></li>
+                        <li><a href="#blog">Novidades</a></li>
+                        <li><a href="#lojas">Lojas</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </header>
 
-    <hr>
 
-    
     <main>
-        <section id="hero">
-            <div class="container">
 
-                <div class="grid-instagram"></div>
-
-                <div class="actions">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Siga-nos no Instagram" class="btn s pink">Nos siga no Instagram <i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-            </div>
-        </section>
-        
-
-        <section class="banner">
-            <div class="flex-wrap">
-
-                <div class="box img purple">
-                    <div class="inner">
-
-                        <img src="assets/imgs/Logo RdP + PP.png" alt="Rua da Praia shopping | Ponto Pronto">
-                    
-                    </div>
-                </div>
-
-                <div class="box info gold">
-                    <div class="inner">
-
-                        <h2 class="tt m">Desde 1990 o centro passa por aqui</h2>
-                        <p>Desde 1990, o Rua da Praia Shopping faz parte da rotina de Porto Alegre. Com lojas, serviços e gastronomia no Centro Histórico, é o destino ideal para quem busca conveniência e variedade.</p>
-                        
-                        <div class="action">
-                            <a href="#sobre" class="btn s pink">Saiba mais</a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        <section id="hero"></section>
 
 
         <section id="lojas">
-            <div class="container">
+            <div>
 
-                <header>
-                    <h2 class="tt m">Lojas</h2>
+                <header class="header-sec">
+                    <h2>Lojas</h2>
                     <p>Moda, tecnologia, beleza e muito mais. Aqui, você encontra variedade para todas as ocasiões.</p>
                 </header>
 
-
-                <ul class="grid-lojas">
-
-                    <li class="card loja">
-                        <div class="inner">
-
-                            <div class="img">
-                                <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Alê Fermino">
-                            </div>
+                <div class="pt-5">
+                    <form action="" class="loja-busca">
+                        <div>
+                            <fieldset class="select">
+                                <select name="" id="">
+                                    <option value="">Segmento</option>
+                                    
+                                    <option value="">Conteudo 1</option>
+                                    <option value="">Conteudo 2</option>
+                                    <option value="">Conteudo 3</option>
+                                    <option value="">Conteudo 4</option>
+                                </select>
+                            </fieldset>
     
-                            <div class="info">
-                                <h3>Alê Fermino</h3>
-                                <span>Moda e Acessórios</span>
-    
-                                <a href="#overlayMap?ale-fermino" class="map" aria-label="Localização: Pavimento Andradas">Pavimento Andradas</a>
-                                <a href="tel:+555198707240" class="phone" aria-label="Telefone: 51 9870.7240"><sub>51</sub> 9870.7240</a>
-    
-                                <a href="lojas/ale-fermino" class="more">Detalhes<i class="fa-solid fa-circle-info"></i></a>
-                            </div>
-
+                            <fieldset class="input">
+                                <input type="text" placeholder="Pesquise pelo nome da loja...">
+                            </fieldset>
                         </div>
-                    </li>
 
-                    <!-- //////////////////////////////////////////////////////////////// -->
-                    <!-- //////////////////////////////////////////////////////////////// -->
+                        <button class="btn-busca">
+                            <span>Buscar</span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
 
-                </ul>
+                    <ul class="grid-lojas flex flex-wrap gap-5">
 
+                        <li class="card loja">
+                            <div class="wrap">
 
-                <div class="action">
-                    <a href="#mais-lojas" aria-label="Carregar mais lojas" class="btn s gold">Carregar mais</a>
+                                <div class="img">
+                                    <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Ale Fermoino">
+                                </div>
+    
+                                <div class="info">
+                                    <h3>Alê Fermino</h3>
+                                    <p>Moda e Acessórios</p>
+    
+                                    <div class="actions">
+                                        <a href="/loja/ale-fermino#pin" class="btn pin"><i class="fa-solid fa-route"></i> Pavimento Andradas</a>
+                                        <a href="tel:5198707240" class="btn tel"><i class="fa-solid fa-mobile-screen"></i> 51 9870.7240</a>
+        
+                                        <a href="/loja/ale-fermino" class="btn more">Detalhes <i class="fa-solid fa-circle-info"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <li class="card loja">
+                            <div class="wrap">
+
+                                <div class="img">
+                                    <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Ale Fermoino">
+                                </div>
+    
+                                <div class="info">
+                                    <h3>Alê Fermino</h3>
+                                    <p>Moda e Acessórios</p>
+    
+                                    <div class="actions">
+                                        <a href="/loja/ale-fermino#pin" class="btn pin"><i class="fa-solid fa-route"></i> Pavimento Andradas</a>
+                                        <a href="tel:5198707240" class="btn tel"><i class="fa-solid fa-mobile-screen"></i> 51 9870.7240</a>
+        
+                                        <a href="/loja/ale-fermino" class="btn more">Detalhes <i class="fa-solid fa-circle-info"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="card loja">
+                            <div class="wrap">
+
+                                <div class="img">
+                                    <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Ale Fermoino">
+                                </div>
+    
+                                <div class="info">
+                                    <h3>Alê Fermino</h3>
+                                    <p>Moda e Acessórios</p>
+    
+                                    <div class="actions">
+                                        <a href="/loja/ale-fermino#pin" class="btn pin"><i class="fa-solid fa-route"></i> Pavimento Andradas</a>
+                                        <a href="tel:5198707240" class="btn tel"><i class="fa-solid fa-mobile-screen"></i> 51 9870.7240</a>
+        
+                                        <a href="/loja/ale-fermino" class="btn more">Detalhes <i class="fa-solid fa-circle-info"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="card loja">
+                            <div class="wrap">
+
+                                <div class="img">
+                                    <img src="upload/lojas/loja-ale_fermino.png" alt="loja: Ale Fermoino">
+                                </div>
+    
+                                <div class="info">
+                                    <h3>Alê Fermino</h3>
+                                    <p>Moda e Acessórios</p>
+    
+                                    <div class="actions">
+                                        <a href="/loja/ale-fermino#pin" class="btn pin"><i class="fa-solid fa-route"></i> Pavimento Andradas</a>
+                                        <a href="tel:5198707240" class="btn tel"><i class="fa-solid fa-mobile-screen"></i> 51 9870.7240</a>
+        
+                                        <a href="/loja/ale-fermino" class="btn more">Detalhes <i class="fa-solid fa-circle-info"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- ///////////////////////////////////////////////////////////// -->
+
+                    </ul>
                 </div>
 
             </div>
@@ -140,153 +189,179 @@
 
 
         <section id="blog">
-            <div class="container">
+            <div>
 
-                <header>
-                    <h2 class="tt m">Acontece no Rua</h2>
+                <header class="header-sec">
+                    <h2>Acontece no Rua</h2>
                     <p>Fique por dentro! Acompanhe as últimas novidades, eventos e tendências do Rua da Praia Shopping.</p>
                 </header>
 
-                <ul class="grid-posts">
+                <div class="contianer-grid pt-5">
+                    <ul class="grid-posts">
 
-                    <li class="card post">
-                        <div class="inner">
+                        <li class="card post">
+                            <div>
 
-                            <a href="posts/rua-da-praia-shopping" class="more img">
-                                <img src="upload/blog/post-petfriendly.png" alt="post: Rua da Praia Shopping">
-                            </a>
-    
-                            <div class="info">
-                                <a href="posts/rua-da-praia-shopping" class="more">
-                                    <h3>PETFRIENDLY</h3>
+                                <a href="/blog/petfriendly" class="img block">
+                                    <img src="upload/blog/post-petfriendly.png" alt="post: PETFRIENDLY">
                                 </a>
-                                <p>Seu pet é muito bem vindo no Rua!</p>
+    
+                                <div class="info">
+                                    <a href="/blog/petfriendly"><h3>PETFRIENDLY</h3></a>
+                                    <p>Seu pet é muito bem vindo no Rua!</p>
+                                </div>
+
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
-
-                    <!-- /////////////////////////////////////////////////// -->
-                    <!-- /////////////////////////////////////////////////// -->
-
-                </ul>
-
-                <div class="action">
-                    <a href="#mais-posts" aria-label="Carregar mais posts" class="btn m gold">Carregar mais</a>
+                    </ul>
                 </div>
 
             </div>
         </section>
 
 
-        <section id="sobre" class="purple waves">
-            <div class="container">
+        <section id="sobre">
+            <div>
 
-                <div class="flex-wrap">
-                    <div class="box img">
-                        <img src="assets/imgs/Logo-branco-p.svg" alt="Rua da Praia - shopping">
+                <div class="flex flex-wrap justify-center items-center gap-14">
+                    <div class="w-full lg:w-[calc(50%-40px)] flex justify-center items-center">
+                        <img src="/src/imgs/Logo-branco-p.svg" alt="" class="max-w-80">
                     </div>
+                    
+                    <header class="header-sec w-full lg:w-[calc(50%-40px)]">
+                        <h2>No coração do Centro Histórico</h2>
 
-                    <div class="box info">
-                        <div class="inner">
-                            <h2 class="tt b">No coração do Centro Histórico</h2>
-
-                            <p>Inaugurado em 1990 pelo Grupo Isdra, o Rua da Praia Shopping é um dos mais tradicionais de Porto Alegre. Localizado junto à Praça da Alfândega, possui quatro andares com diversas lojas de vestuário, calçados, eletrônicos, além de opções gastronômicas e cinema.</p>
-                            <p>Diariamente, mais de 45 mil pessoas circulam pelo shopping, que tem a Lojas Americanas como âncora e um amplo mix de serviços.</p>    
-                        </div>
-                    </div>
+                        <p>Inaugurado em 1990 pelo Grupo Isdra, o Rua da Praia Shopping é um dos mais tradicionais de Porto Alegre. Localizado junto à Praça da Alfândega, possui quatro andares com diversas lojas de vestuário, calçados, eletrônicos, além de opções gastronômicas e cinema.</p>
+                        <p>Diariamente, mais de 45 mil pessoas circulam pelo shopping, que tem a Lojas Americanas como âncora e um amplo mix de serviços.</p>
+                    </header>
                 </div>
 
-                <header>
-                    <h3 class="tt m tt-servicos">Nossos serviços</h3>
-                </header>
+                <div class="servicos">
+                    <header>
+                        <h3>Nossos serviços</h3>
+                    </header>
 
-                <ul class="list-servicos">
+                    <ul class="grid-servicos">
 
-                    <li class="card item">
-                        <a href="servico/cadeira-de-rodas" class="wrap">
-                            <div class="img">
-                                <i class="fa-solid fa-wheelchair"></i>
-                            </div>
+                        <li class="card servico">
+                            <a href="/servico/cadeira-de-rodas">
 
-                            <div class="info">
-                                <h4>Cadeira de rodas</h4>
-                                <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
-                            </div>
-                        </a>
-                    </li>
+                                <div class="img">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                </div>
 
-                    <!-- /////////////////////////////////////////////////////// -->
-                    <li class="card item">
-                        <a href="servico/cadeira-de-rodas" class="wrap">
-                            <div class="img">
-                                <i class="fa-regular fa-building-columns"></i>
-                            </div>
+                                <div class="info">
+                                    <h4>Cadeira de rodas</h4>
+                                    <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
+                                </div>
 
-                            <div class="info">
-                                <h4>Caixas Eletrônicos</h4>
-                                <p>Banco 24h, Banrisul e Saque Pague.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card item">
-                        <a href="servico/cadeira-de-rodas" class="wrap">
-                            <div class="img">
-                                <i class="fa-regular fa-baby-carriage"></i>
-                            </div>
+                            </a>
+                        </li>
 
-                            <div class="info">
-                                <h4>Carrinho de bebê</h4>
-                                <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto. Peso: bebês de até 15Kg.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- /////////////////////////////////////////////////////// -->
+                        <!-- /////////////////////////////////////////////////////////////////////// -->
+                        <li class="card servico">
+                            <a href="/servico/cadeira-de-rodas">
 
-                </ul>
+                                <div class="img">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                </div>
+
+                                <div class="info">
+                                    <h4>Cadeira de rodas</h4>
+                                    <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="card servico">
+                            <a href="/servico/cadeira-de-rodas">
+
+                                <div class="img">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                </div>
+
+                                <div class="info">
+                                    <h4>Cadeira de rodas</h4>
+                                    <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="card servico">
+                            <a href="/servico/cadeira-de-rodas">
+
+                                <div class="img">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                </div>
+
+                                <div class="info">
+                                    <h4>Cadeira de rodas</h4>
+                                    <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="card servico">
+                            <a href="/servico/cadeira-de-rodas">
+
+                                <div class="img">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                </div>
+
+                                <div class="info">
+                                    <h4>Cadeira de rodas</h4>
+                                    <p>Disponível para empréstimo mediante cadastro e apresentação de documento oficial com foto.</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <!-- /////////////////////////////////////////////////////////////////////// -->
+
+                    </ul>
+                </div>
 
             </div>
         </section>
 
 
         <section id="contato">
-            <div class="container">
+            <div>
 
-                <div class="box">
-                    <header>
-                        <h2 class="tt m">Entre em contato</h2>
-                    </header>
-    
-                    <a href="https://wa.me/5551981640560" class="btn xb"><i class="fa-solid fa-store"></i><span>Seja lojista</span></a>
-    
-                    <a href="https://wa.me/5551981640560" class="btn xb"><i class="fa-solid fa-briefcase"></i><span>Trabalhe conosco</span></a>
-                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="tel:5551981640560">51 98164.0560</a>
+                        </li>
 
-                <div class="box">
-                    <a href="tel:+5551981640560" class="contato-link"><i class="fa-solid fa-mobile-screen-button"></i><span>51</span> 98164.0560</a>
-                    
-                    <a href="mailto:contato@pontopronto.com" class="contato-link"><i class="fa-solid fa-envelope"></i>contato@pontopronto.com</a>
-                    
-                    <a href="https://maps.google.com/?q=Rua+dos+Andradas,1001" class="contato-link"><i class="fa-solid fa-location-dot"></i><address>Rua dos Andradas, 1001 - Centro Histórico - Porto Alegre/RS</address></a>
+                        <li>
+                            <a href="mail:contato@pontopronto.com">contato@pontopronto.com</a>
+                        </li>
+
+                        <li>
+                            <a href="http://www.google.com/maps">Rua dos Andradas, 1001 - Centro Histórico - Porto Alegre/RS</a>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <header class="header-sec">
+                            <h2>Entre em contato</h2>
+                        </header>
+
+                        Seja lojista
+
+                        Trabalhe conosco
+                    </div>
                 </div>
 
             </div>
         </section>
+
     </main>
 
-    <hr>
-
-    <footer id="main-footer" class="purple waves">
-        <div class="container">
-            
-            © 2025 <b>Rua da Praia Shopping</b>. Todos os direitos reservados.
-            
-        </div>
+    <footer id="main-footer">
+        <p>© 2025 Rua da Praia Shopping. Todos os direitos reservados.</p>
     </footer>
-
-
-    <!-- JS -->
-    <script src="assets/js/script.js" defer></script>
 
 </body>
 </html>
