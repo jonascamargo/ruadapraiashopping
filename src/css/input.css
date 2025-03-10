@@ -130,7 +130,52 @@
 
 
     /* LOJAS: CARD */
+    .grid-lojas {
+        @apply flex flex-wrap gap-5;
+    }
+
     .card.loja {
+        @apply w-full lg:w-[calc(50%-10px)];
+    }
+    .card.loja .wrap {
+        @apply sm:flex;
+    }
+
+    .card.loja .img {
+        @apply overflow-hidden rounded relative sm:min-h-80 lg:min-h-60 w-full sm:w-2/5 pb-[100%] sm:pb-0;
+    }
+    .card.loja .img img {
+        @apply w-full h-full absolute object-cover;
+    }
+
+    .card.loja .info {
+        @apply p-5 sm:w-3/5;
+    }
+    .card.loja .info h3 {
+        @apply font-lato font-normal text-ice text-3xl;
+    }
+    .card.loja .info p {
+        @apply font-lato text-ice text-sm;
+    }
+
+    .card.loja .actions {
+        @apply flex flex-col gap-y-3 pt-4;
+    }
+
+    .card.loja:after {
+        @apply z-[1] bg-purple;
+    }
+    .card.loja:before {
+        @apply z-[2];
+        background-image: url("../imgs/wave-bg-gold-lojas.png");
+        background-size: 220px;
+    }
+    .card.loja:hover:before {
+        @apply shadow-purple-m;
+    }
+
+    
+    /* .card.loja {
         @apply w-full lg:w-[calc(50%-10px)];
     }
 
@@ -169,7 +214,7 @@
     }
     .card.loja:hover:before {
         @apply shadow-purple-m;
-    }
+    } */
 
 
 

@@ -11383,6 +11383,12 @@ main > section > div {
 
 /* LOJAS: CARD */
 
+.grid-lojas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
 .card.loja {
   width: 100%;
 }
@@ -11393,22 +11399,15 @@ main > section > div {
   }
 }
 
-.card.loja .wrap {
-  display: flex;
-  flex-direction: column;
-}
-
 @media (min-width: 640px) {
   .card.loja .wrap {
-    flex-direction: row;
+    display: flex;
   }
 }
 
 .card.loja .img {
   position: relative;
-  min-height: 18rem;
   width: 100%;
-  min-width: 18rem;
   overflow: hidden;
   border-radius: 0.25rem;
   padding-bottom: 100%;
@@ -11416,8 +11415,15 @@ main > section > div {
 
 @media (min-width: 640px) {
   .card.loja .img {
+    min-height: 20rem;
     width: 40%;
     padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card.loja .img {
+    min-height: 15rem;
   }
 }
 
@@ -11430,10 +11436,13 @@ main > section > div {
 }
 
 .card.loja .info {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .card.loja .info {
+    width: 60%;
+  }
 }
 
 .card.loja .info h3 {
@@ -11477,6 +11486,47 @@ main > section > div {
   --tw-shadow-colored: 0 3px 8px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+/* .card.loja {
+        @apply w-full lg:w-[calc(50%-10px)];
+    }
+
+    .card.loja .wrap {
+        @apply flex flex-col sm:flex-row;
+    }
+
+    .card.loja .img {
+        @apply overflow-hidden rounded relative min-w-72 min-h-72 pb-[100%] sm:pb-0 w-full sm:w-2/5;
+    }
+    .card.loja .img img {
+        @apply w-full h-full absolute object-cover;
+    }
+    
+    .card.loja .info {
+        @apply px-6 py-5;
+    }
+    .card.loja .info h3 {
+        @apply font-lato font-normal text-ice text-3xl;
+    }
+    .card.loja .info p {
+        @apply font-lato text-ice text-sm;
+    }
+    
+    .card.loja .actions {
+        @apply flex flex-col gap-y-3 pt-4;
+    }
+    
+    .card.loja:after {
+        @apply z-[1] bg-purple;
+    }
+    .card.loja:before {
+        @apply z-[2];
+        background-image: url("../imgs/wave-bg-gold-lojas.png");
+        background-size: 220px;
+    }
+    .card.loja:hover:before {
+        @apply shadow-purple-m;
+    } */
 
 /* ///////////////////// BLOG */
 
@@ -11714,10 +11764,6 @@ main > section > div {
   display: none;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-full {
   width: 100%;
 }
@@ -11756,14 +11802,6 @@ main > section > div {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-14 {
@@ -11830,16 +11868,6 @@ main > section > div {
   --tw-shadow: 0 5px 12px rgba(84, 28, 131, 0.8);
   --tw-shadow-colored: 0 5px 12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 768px) {
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
-  .md\:w-\[calc\(50\%-40px\)\] {
-    width: calc(50% - 40px);
-  }
 }
 
 @media (min-width: 1024px) {
