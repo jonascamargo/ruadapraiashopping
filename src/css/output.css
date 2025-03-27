@@ -11487,47 +11487,6 @@ main > section > div {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/* .card.loja {
-        @apply w-full lg:w-[calc(50%-10px)];
-    }
-
-    .card.loja .wrap {
-        @apply flex flex-col sm:flex-row;
-    }
-
-    .card.loja .img {
-        @apply overflow-hidden rounded relative min-w-72 min-h-72 pb-[100%] sm:pb-0 w-full sm:w-2/5;
-    }
-    .card.loja .img img {
-        @apply w-full h-full absolute object-cover;
-    }
-    
-    .card.loja .info {
-        @apply px-6 py-5;
-    }
-    .card.loja .info h3 {
-        @apply font-lato font-normal text-ice text-3xl;
-    }
-    .card.loja .info p {
-        @apply font-lato text-ice text-sm;
-    }
-    
-    .card.loja .actions {
-        @apply flex flex-col gap-y-3 pt-4;
-    }
-    
-    .card.loja:after {
-        @apply z-[1] bg-purple;
-    }
-    .card.loja:before {
-        @apply z-[2];
-        background-image: url("../imgs/wave-bg-gold-lojas.png");
-        background-size: 220px;
-    }
-    .card.loja:hover:before {
-        @apply shadow-purple-m;
-    } */
-
 /* ///////////////////// BLOG */
 
 /* LOJAS: HEADER */
@@ -11542,7 +11501,75 @@ main > section > div {
   color: rgb(219 147 16 / var(--tw-text-opacity, 1));
 }
 
+.grid-posts {
+  /* @apply flex flex-wrap gap-5; */
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 150px); */
+  grid-gap: 20px;
+}
+
 /* POST: CARD */
+
+.card.post:nth-child(1),
+    .card.post:nth-child(2) {
+  grid-row: 1 / 4;
+}
+
+.card.post:nth-child(n+3) {
+  grid-row: auto / span 1;
+}
+
+.card.post:nth-child(n+3) .wrap {
+  display: flex;
+}
+
+.card.post:nth-child(n+3) .img {
+  max-width: 180px;
+  /* max-height: 150px; */
+  height: 100%;
+  background-color: red;
+}
+
+.card.post:nth-child(n+3) .info {
+  /* background-color: orange; */
+}
+
+.card.post .img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.card.post .img img {
+  height: 100%;
+  width: 100%;
+}
+
+.card.post .info {
+  padding: 1.25rem;
+}
+
+.card.post .info h3 {
+  padding-bottom: 0.75rem;
+  font-family: Lato, sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(86 42 121 / var(--tw-text-opacity, 1));
+}
+
+.card.post .info p {
+  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(86 42 121 / var(--tw-text-opacity, 1));
+}
 
 .card.post:after {
   z-index: 1;
@@ -11554,6 +11581,9 @@ main > section > div {
   z-index: 2;
   background-image: url("../imgs/wave-bg-pink.png");
   background-size: 220px;
+  --tw-shadow: 0 1px 2px rgba(84, 28, 131, 0.3);
+  --tw-shadow-colored: 0 1px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .card.post:hover:after {
@@ -11862,12 +11892,6 @@ main > section > div {
 
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.hover\:shadow-purple-b:hover {
-  --tw-shadow: 0 5px 12px rgba(84, 28, 131, 0.8);
-  --tw-shadow-colored: 0 5px 12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 1024px) {

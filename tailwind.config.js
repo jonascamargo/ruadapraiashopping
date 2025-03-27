@@ -19,9 +19,9 @@ module.exports = {
         'lato': ['Lato', 'sans-serif']
       },
       boxShadow: {
-        'purple-s': '0 1px 2px rgba(84, 28, 131, 0.3)',
-        'purple-m': '0 3px 8px rgba(84, 28, 131, 0.6)',
-        'purple-b': '0 5px 12px rgba(84, 28, 131, 0.8)',
+        'purple-sm': '0 1px 2px rgba(84, 28, 131, 0.3)',
+        'purple-md': '0 3px 8px rgba(84, 28, 131, 0.6)',
+        'purple-lg': '0 5px 12px rgba(84, 28, 131, 0.8)',
       },
       maxWidth: {
         // 1440px (90rem) - Layout maximum width

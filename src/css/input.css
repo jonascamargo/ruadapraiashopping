@@ -125,7 +125,7 @@
         @apply sm:hidden;
     }
     .btn-busca:hover {
-        @apply shadow-purple-m;
+        @apply shadow-purple-md;
     }
 
 
@@ -166,55 +166,11 @@
         @apply z-[1] bg-purple;
     }
     .card.loja:before {
-        @apply z-[2];
-        background-image: url("../imgs/wave-bg-gold-lojas.png");
-        background-size: 220px;
+        @apply z-[2] bg-[url("../imgs/wave-bg-gold-lojas.png")] bg-[length:220px];
     }
     .card.loja:hover:before {
-        @apply shadow-purple-m;
+        @apply shadow-purple-md;
     }
-
-    
-    /* .card.loja {
-        @apply w-full lg:w-[calc(50%-10px)];
-    }
-
-    .card.loja .wrap {
-        @apply flex flex-col sm:flex-row;
-    }
-
-    .card.loja .img {
-        @apply overflow-hidden rounded relative min-w-72 min-h-72 pb-[100%] sm:pb-0 w-full sm:w-2/5;
-    }
-    .card.loja .img img {
-        @apply w-full h-full absolute object-cover;
-    }
-    
-    .card.loja .info {
-        @apply px-6 py-5;
-    }
-    .card.loja .info h3 {
-        @apply font-lato font-normal text-ice text-3xl;
-    }
-    .card.loja .info p {
-        @apply font-lato text-ice text-sm;
-    }
-    
-    .card.loja .actions {
-        @apply flex flex-col gap-y-3 pt-4;
-    }
-    
-    .card.loja:after {
-        @apply z-[1] bg-purple;
-    }
-    .card.loja:before {
-        @apply z-[2];
-        background-image: url("../imgs/wave-bg-gold-lojas.png");
-        background-size: 220px;
-    }
-    .card.loja:hover:before {
-        @apply shadow-purple-m;
-    } */
 
 
 
@@ -229,20 +185,69 @@
     }
 
 
+    .grid-posts {
+        /* @apply flex flex-wrap gap-5; */
+        @apply pt-5;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 150px); */
+        grid-gap: 20px;
+    }
+
     /* POST: CARD */
+    .card.post:nth-child(1),
+    .card.post:nth-child(2) {
+        grid-row: 1 / 4;
+    }
+
+    .card.post:nth-child(n+3) {
+        grid-row: auto / span 1;
+    }
+    .card.post:nth-child(n+3) .wrap {
+        display: flex;
+    }
+    .card.post:nth-child(n+3) .img {
+        max-width: 180px;
+        /* max-height: 150px; */
+        height: 100%;
+        background-color: red;
+    }
+    .card.post:nth-child(n+3) .info {
+        /* background-color: orange; */
+    }
+    
+
+
+
+    .card.post .img {
+        @apply overflow-hidden rounded relative w-full;
+    }
+    .card.post .img img {
+        @apply w-full h-full;
+    }
+
+    .card.post .info {
+        @apply p-5;
+    }
+    .card.post .info h3 {
+        @apply font-lato font-normal text-purple text-3xl pb-3;
+    }
+    .card.post .info p {
+        @apply font-lato text-purple text-sm;
+    }
+
     .card.post:after {
         @apply z-[1] bg-iceLight;
     }
     .card.post:before {
-        @apply z-[2];
-        background-image: url("../imgs/wave-bg-pink.png");
-        background-size: 220px;
+        @apply z-[2] bg-[url("../imgs/wave-bg-pink.png")] bg-[length:220px] shadow-purple-sm;
     }
     .card.post:hover:after {
         @apply bg-gold;
     }
     .card.post:hover:before {
-        @apply shadow-purple-m;
+        @apply shadow-purple-md;
     }
 
 
@@ -267,7 +272,7 @@
 
     /* SOBRE: SERVICOS */
     .servicos {
-        @apply  pt-32;
+        @apply pt-32;
     }
     .servicos header {
         @apply text-center text-ice text-5xl font-rosmatika pb-8;
@@ -313,7 +318,7 @@
         background-size: 220px;
     }
     .card.servico:hover:before {
-        @apply shadow-purple-m;
+        @apply shadow-purple-md;
     }
 
 
