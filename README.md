@@ -1,3 +1,3 @@
 # Thema para o site Rua da Praia shopping
 
-## desenvolvido por Joninhas!! alterei MASI UMA VEZ no pc
+## desenvolvido por Joninhas!! alterei TERCEIRA VEZ no pc
