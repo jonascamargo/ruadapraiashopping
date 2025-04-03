@@ -1,0 +1,439 @@
+[
+    {
+        "key": "group_67eb5959a7e30",
+        "title": "Contato",
+        "fields": [
+            {
+                "key": "field_67eb59596167a",
+                "label": "Link",
+                "name": "rua__contato_link",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_67eb59736167b",
+                "label": "Icone",
+                "name": "rua__contato_icone",
+                "aria-label": "",
+                "type": "font-awesome",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "icon_sets": "",
+                "custom_icon_set": "",
+                "default_label": "&lt;i class=\"fa-classic fa-solid fa-link fa-fw\"&gt;&lt;\/i&gt; Link",
+                "default_value": "{\"family\" : \"classic\", \"style\" : \"solid\", \"id\" : \"link\", \"label\" : \"Link\", \"unicode\" : \"f0c1\"}",
+                "save_format": "element",
+                "allow_null": 0,
+                "show_preview": 1,
+                "enqueue_fa": 0,
+                "allow_in_bindings": 0,
+                "fa_live_preview": "",
+                "choices": []
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rua_contato"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_67eb536c06d94",
+        "title": "Loja Contato",
+        "fields": [
+            {
+                "key": "field_67eb536c1b43f",
+                "label": "Email",
+                "name": "rua__loja_email",
+                "aria-label": "",
+                "type": "email",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": "contato@meusite.com",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67eb53f81b440",
+                "label": "Telefone",
+                "name": "rua__loja_telefone",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 1,
+                "placeholder": "(00) 0000-0000",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67eb541c1b441",
+                "label": "Whatsapp",
+                "name": "rua__loja_whats",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 1,
+                "placeholder": "(00) 0000-0000",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67eb54991b442",
+                "label": "Localização",
+                "name": "rua__loja_local",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_67eb54e11b443",
+                        "label": "Titulo",
+                        "name": "rua__loja_local_titulo",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "Abra o mapa",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_67eb552b1b444",
+                        "label": "Mapa",
+                        "name": "rua__loja_local_mapa",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "allow_in_bindings": 0,
+                        "preview_size": "medium"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rua_lojas"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_67eb51d049e18",
+        "title": "Loja Links",
+        "fields": [
+            {
+                "key": "field_67eb51d04b26e",
+                "label": "Site",
+                "name": "rua__loja_url_site",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_67eb52664b26f",
+                "label": "Instagram",
+                "name": "rua__loja_url_insta",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_67eb52764b270",
+                "label": "Facebook",
+                "name": "rua__loja_url_face",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_67eb52914b272",
+                "label": "YouTube",
+                "name": "rua__loja_url_youtube",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67eb52814b271",
+                "label": "X",
+                "name": "rua__loja_url_x",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rua_lojas"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "left",
+        "instruction_placement": "field",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_67eb58b8bc992",
+        "title": "Serviço",
+        "fields": [
+            {
+                "key": "field_67eb58b8524bb",
+                "label": "Descrição",
+                "name": "rua__servico_descricao",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_67eb58e1524bc",
+                "label": "Icone",
+                "name": "rua__servico_icone",
+                "aria-label": "",
+                "type": "font-awesome",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "icon_sets": [
+                    "solid",
+                    "regular",
+                    "brands"
+                ],
+                "custom_icon_set": "",
+                "default_label": "",
+                "default_value": "",
+                "save_format": "element",
+                "allow_null": 0,
+                "show_preview": 1,
+                "enqueue_fa": 0,
+                "allow_in_bindings": 0,
+                "fa_live_preview": "",
+                "choices": []
+            },
+            {
+                "key": "field_67ecc4ec4dfb8",
+                "label": "Mapa",
+                "name": "rua__servico_mapa",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Imagem do mapa do local da loja.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rua_servicos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

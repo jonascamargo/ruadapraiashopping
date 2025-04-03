@@ -1,0 +1,932 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Rosmatika';
+    src: url('../webfonts/RosmatikaRegular.woff2') format('woff2'),
+         url('../webfonts/RosmatikaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    /* FONTES */
+    --font-rua-tt: 'Rosmatika', serif;
+    --font-rua-txt: "Lato", sans-serif;
+
+    /* CORES */
+    --color-rua-1: #562A79;
+    --color-rua-2: #F1B03A;
+    --color-rua-3: #DD52AB;
+    --color-rua-4: #E9E9E9;
+    --color-rua-5: rgba(19, 1, 34, 0.8);
+    --color-rua-6: rgba(19, 1, 34, 0.3);
+}
+
+hr {
+    display: none;
+}
+
+html {
+    @apply font-rua-txt;
+    @apply bg-rua-4 bg-[url("../imgs/wave-bg-white-page.png")] bg-repeat-y;
+}
+
+main > section {
+    @apply px-3 lg:px-5 py-32;
+}
+
+main > section > .wrapper {
+    @apply max-w-[1400px] mx-auto;
+}
+
+
+
+
+
+/* ----- ----- ----- MODAL */
+
+.overlap {
+    @apply bg-rua-5;
+    @apply fixed z-20 left-0 top-0 w-full h-full;
+    @apply flex justify-center items-center;
+}
+
+.modal-overlap {
+    @apply w-full h-full flex justify-center items-center;
+}
+
+.modal-container {
+    @apply relative p-5;
+}
+
+.modal-close {
+    /* @apply text-4xl text-rua-3 leading-[100%] bg-rua-1 py-2 px-3 rounded-sm absolute z-10 left-[calc(100%+-10px)] top-[calc(100%-10px)] cursor-pointer; */
+    @apply text-4xl text-rua-3 leading-[100%] bg-rua-1 py-2 px-3 rounded-sm absolute z-10 left-[calc(100%+-10px)] cursor-pointer;
+    @apply block hover:bg-rua-3 hover:text-rua-1 transition-all duration-222;
+}
+.overlap.stp1 .modal-close {
+    @apply hidden!;
+}
+
+.modal-loading {
+    @apply hidden text-rua-2 text-6xl leading-[100%] p-5;
+}
+.overlap.stp1 .modal-loading {
+    @apply block!;
+}
+
+.modal-wrap {
+    @apply bg-rua-4 max-w-[1400px] min-w-[300px] max-h-[80vh] min-h-[300px] rounded-lg shadow-xl border-1 border-white overflow-y-auto overflow-x-hidden;
+}
+.overlap.stp1 .modal-wrap {
+    @apply min-w-auto min-h-auto;
+}
+
+
+.modal-content {
+    @apply block;
+}
+.overlap.stp1 .target-ajax {
+    @apply hidden;
+}
+
+
+.grid-modal {
+    @apply flex flex-wrap gap-10 p-7;
+}
+
+.grid-modal .col-a {
+    @apply w-full lg:w-[calc(35%-20px)];
+}
+
+.grid-modal .col-b {
+    @apply w-full lg:w-[calc(65%-20px)];
+}
+
+
+.mobile-header-modal {
+    @apply  block lg:hidden pb-5;
+}
+.desk-header-modal {
+    @apply hidden lg:block pb-5;
+}
+
+
+.modal-thumb {
+    @apply overflow-hidden rounded-lg mb-5;
+}
+.modal-thumb img {
+    @apply w-full h-full object-cover;
+}
+
+.modal-title {
+    @apply font-rua-tt text-4xl;
+}
+
+
+.modal-links {
+    @apply mb-5;
+}
+.modal-links li {
+    @apply mb-1;
+}
+.modal-links a {
+    @apply inline-block bg-rua-1 text-sm font-semibold text-rua-4 px-4 py-1.5 rounded-sm;
+    @apply hover:bg-rua-3 hover:text-rua-2 transition-all duration-222;
+}
+.modal-links a i {
+    @apply text-xl mr-3;
+}
+
+
+.modal-social {
+    @apply flex flex-wrap gap-0.5;
+}
+.modal-social a {
+    @apply inline-block bg-transparent font-semibold px-2 py-1 rounded-sm;
+}
+.modal-social i {
+    @apply text-2xl;
+}
+
+
+
+
+
+
+
+.modal-loja {
+    @apply bg-[url("../imgs/wave-bg-pink.png")] bg-[length:380px] bg-repeat-x lg:bg-repeat-y;
+}
+
+
+.loja-categorias,
+.loja-post .modal-title {
+    @apply text-rua-1!;
+}
+/* .loja-categorias {
+    @apply mb-5;
+} */
+
+.modal-loja .modal-social a,
+.loja-post .modal-social a {
+    @apply text-rua-1 bg-rua-4;
+    @apply hover:bg-rua-1 hover:text-rua-2 transition-all duration-222;
+}
+
+.blog-post .modal-title,
+.post-data {
+    @apply text-rua-2!;
+}
+
+
+
+
+/* ----- ----- ----- TITLES */
+
+*[class*="tt-"] {
+    @apply font-rua-tt font-normal;
+}
+.tt-1 {
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+}
+.tt-2 {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+}
+.tt-3 {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+.tt-4 {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+.tt-5 {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+.tt-6 {
+    @apply text-2xl lg:text-3xl xl:text-4xl;
+}
+
+
+
+
+
+/* ----- ----- ----- CARD-BUBBLE */
+
+*[class*="card-"] {
+    @apply relative;
+}
+
+*[class*="card-"]:hover {
+    @apply z-[10];
+}
+
+*[class*="card-"] > * {
+    @apply relative z-[5];
+}
+
+*[class*="card-"]:before,
+*[class*="card-"]:after {
+    @apply content-[''] absolute left-2/4 top-2/4 w-full h-full -translate-x-2/4 -translate-y-2/4 rounded;
+    @apply transition-all duration-222 ease-in-out;
+}
+*[class*="card-"]:before {
+    @apply opacity-15;
+}
+*[class*="card-"]:hover:after,
+*[class*="card-"]:hover:before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+}
+*[class*="card-"]:hover:before {
+    @apply opacity-60;
+}
+
+
+
+
+
+
+/* ----- ----- ----- BOTOES */
+
+*[class^="btn"] {
+    @apply font-rua-tt font-normal text-xl leading-13;
+    @apply relative inline-block px-11 rounded-md outline-none cursor-pointer;
+}
+*[class^="btn"]:not(:disabled) {
+    @apply hover:shadow-lg transition-all duration-300 ease-in-out;
+}
+*[class^="btn"]:disabled {
+    @apply bg-gray-300 text-rua-4 cursor-not-allowed;
+}
+
+
+*[class^="btn"] i {
+    @apply text-2xl relative -bottom-[3px];
+}
+*[class^="btn"] i:first-child {
+    @apply mr-3;
+}
+*[class^="btn"] i:last-child {
+    @apply ml-3;
+}
+
+
+.btn-pink {
+    @apply bg-rua-3 text-rua-4;
+}
+.btn-gold {
+    @apply bg-rua-2 text-rua-1;
+}
+.btn-purple {
+    @apply bg-rua-1 text-rua-4;
+}
+
+
+
+
+
+
+/* ----- ----- ----- header de cada seção */
+
+.wrap > header {
+    @apply pb-10 max-w-full md:max-w-[70%] xl:max-w-[60%];
+}
+
+.wrap .sec-ttl {
+    @apply pb-3;
+}
+
+
+
+
+
+
+/* ----- ----- ----- BLOCO DE TEXTO */
+
+.text-wrapper > *:not(:last-child) {
+    @apply pb-4;
+}
+
+
+
+
+
+
+
+/* ----- ----- ----- LAYOUT COLUNAS */
+
+.grid-content {
+    @apply flex flex-wrap gap-10;
+}
+
+.grid-content > .col-a,
+.grid-content > .col-b {
+    @apply w-[calc(50%-20px)];
+}
+
+.grid-content > .col-a {}
+
+.grid-content > .col-b {}
+
+
+
+
+
+
+/* ----- ----- ----- MENU PRINCIPAL */
+
+#main-header {
+    @apply px-3 md:px-5;
+}
+
+#main-header .wrapper {
+    @apply max-w-[1400px] py-3 mx-auto flex justify-between items-center gap-5;
+}
+
+#main-header .logo-top .custom-logo-link {
+    @apply block max-w-[90px];
+}
+
+#main-header .menu-nav-topo {
+    @apply bg-red-600;
+}
+
+#main-header .menu-nav-topo .menu {
+    @apply bg-pink-300;
+    @apply flex flex-col;
+}
+
+.wrapper-menu-nav {
+    @apply relative;
+}
+
+
+/* ----- ----- ----- menu topo */
+.menu-topo {
+    @apply bg-rua-1 p-2 rounded-md;
+}
+
+.menu-topo ul {
+    @apply flex;
+}
+
+.menu-topo a {
+    @apply font-rua-tt font-normal text-xl text-center text-rua-4 leading-12 block px-5;
+    @apply hover:text-rua-2 transition duration-300;
+}
+
+
+/* ----- ----- ----- botao sanduiche para menu mobile */
+.mobile-menu-button {
+    @apply bg-rua-1 w-[56px] h-[56px] relative p-1.5 m-0 rounded-md cursor-pointer;
+    @apply hover:shadow-2xl transition duration-300 hidden;
+}
+.mobile-menu-button span {
+    @apply bg-rua-4 block w-full h-[calc((90%/3)-(100%/5))] rounded-full;
+    @apply group-hover:bg-rua-2 transition duration-300;
+}
+.mobile-menu-button span:not(:last-child) {
+    @apply mb-[calc(100%/5)];
+}
+
+
+@media (width < 50rem) {
+    .menu-topo {
+        @apply absolute right-[calc(100%-30px)] shadow-2xl opacity-0 invisible;
+        @apply transition-all duration-300 delay-75 z-10;
+    }
+    .menu-topo ul {
+        @apply block;
+    }
+    .menu-topo a {
+        @apply text-2xl px-10;
+    }
+    .wrapper-menu-nav.show .menu-topo {
+        @apply visible opacity-100 right-full transition-all duration-300 delay-75;
+    }
+
+    .mobile-menu-button {
+        @apply block;
+    }
+}
+
+
+
+
+
+
+/* ----- ----- ----- campo de pesquisa das seções */
+
+
+.search-container {
+    @apply pb-5 flex justify-end relative;
+}
+
+/* .search-container:before {
+    @apply content-[''] fixed z-5 left-2/4 top-2/4 w-full h-full -translate-x-2/4 -translate-y-2/4 rounded bg-rua-6;
+    @apply transition-all duration-222 ease-in-out;
+} */
+
+.search-container .wrapper {
+    @apply relative p-2 rounded-md relative w-full md:w-[80%];
+}
+
+.search-container .search-grid {
+    @apply flex flex-wrap gap-3;
+}
+
+
+.search-container select,
+.search-container input {
+    @apply font-rua-txt text-lg leading-10 outline-none px-3;
+    @apply w-full ;
+}
+.search-container select {
+    @apply h-[40px];
+}
+
+.search-container select {
+    @apply w-full md:w-[calc(35%-6px)];
+}
+.search-container input {
+    @apply w-full md:w-[calc(65%-6px)];
+}
+
+
+/* ----- ----- ----- resultado da busca */
+
+.search-results {
+    @apply shadow-xl overflow-y-auto max-h-[40vh] rounded-md py-3 absolute z-20 right-0 top-[calc(100%+5px)] z-15 w-full;
+}
+
+.search-results .search-item a,
+.search-results .no-results {
+    @apply font-semibold block py-1 px-4;
+}
+.search-results .search-item:nth-child(even) a {
+    @apply bg-[rgba(255,255,255,0.1)];
+}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU HERO */
+
+#sec-banner {}
+
+.action {
+    @apply text-center pt-10;
+}
+
+#sec-hero .btn-pink span {
+    @apply hidden sm:inline-block;
+}
+#sec-hero .btn-pink i {
+    @apply ml-0 sm:ml-3;
+}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU BANNER */
+
+#sec-banner {}
+
+.banner {
+    @apply bg-rua-2;
+    @apply max-w-[1600px] mx-auto flex flex-wrap gap-10 overflow-hidden rounded-lg;
+}
+
+.banner .col-a,
+.banner .col-b {
+    @apply w-full md:w-[calc(50%-20px)] min-h-auto md:min-h-[500px] flex justify-center items-center;
+}
+
+.banner .col-a {
+    @apply bg-rua-1 bg-[url("../imgs/wave-bg-pink.png")] bg-[length:240px];
+}
+
+.banner > div > .inner {
+    @apply p-5 py-10 transition transition-all duration-300;
+}
+
+.banner-tt {
+    @apply font-rua-tt font-normal text-5xl text-rua-1 pb-10;
+}
+
+.banner .text-wrapper {
+    @apply text-rua-1 text-xl pb-10;
+}
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU LOJAS */
+
+#sec-lojas .wrap > header {
+    @apply text-rua-1!;
+}
+
+
+#sec-lojas .search-container .wrapper,
+#sec-lojas .search-results {
+    @apply bg-rua-1 text-rua-4;
+}
+#sec-lojas .search-container option {
+    @apply bg-rua-1 text-rua-4;
+}
+#sec-lojas .search-results {
+    @apply text-rua-4;
+}
+
+
+.grid-lojas {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3;
+}
+
+.grid-lojas li {
+    @apply flex flex-wrap lg:flex-nowrap;
+}
+
+
+.img-loja,
+.info-loja {
+    @apply w-full;
+}
+
+.img-loja {
+    @apply w-full lg:w-[calc(40%-10px)] pb-[35%] h-[300px] lg:h-auto overflow-hidden rounded-md relative;
+}
+.img-loja img {
+    @apply w-full h-full absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+    object-fit: cover;
+}
+
+.info-loja {
+    @apply flex flex-col justify-between p-3 lg:w-[calc(60%-10px)];
+}
+
+
+.loja-header {
+    @apply pb-3;
+}
+
+.loja-header h3 {
+    @apply font-rua-txt font-bold text-2xl text-rua-4;
+}
+
+.loja-categorias {
+    @apply font-rua-txt text-sm text-rua-4;
+}
+
+
+.loja-links {
+    @apply pb-4;
+}
+
+.loja-links a {
+    @apply font-rua-txt font-bold text-rua-4 bg-transparent px-2 py-1 rounded-md;
+    @apply group-hover:text-rua-1 group-hover:bg-rua-4 transition duration-300;
+}
+.loja-links a:hover {
+    @apply hover:bg-rua-2 hover:text-rua-4!;
+}
+.loja-links a:hover i,
+.loja-links a:hover svg {
+    color: white;
+}
+.loja-links a i,
+.loja-links a svg {
+    @apply text-xl text-rua-2 mr-2;
+}
+
+
+.loja-more {
+    @apply font-rua-txt text-lg font-bold text-rua-4;
+    @apply hover:text-rua-2 transition duration-300;
+}
+.loja-more a i,
+.loja-more a svg {
+    @apply ml-2;
+}
+
+
+.grid-lojas li:after {
+    @apply z-[1] bg-rua-1;
+}
+.grid-lojas li:before {
+    @apply z-[2] bg-[url("../imgs/wave-bg-gold-lojas.png")] bg-[length:220px];
+}
+.grid-lojas li:hover:before {
+    @apply shadow-rua-1;
+}
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU NOVIDADES */
+
+#sec-blog .wrap header {
+    @apply text-rua-2;
+}
+
+
+#sec-blog .search-container .wrapper,
+#sec-blog .search-results {
+    @apply bg-rua-2 text-rua-1!;
+}
+#sec-blog .search-container option {
+    @apply bg-rua-2 text-rua-1;
+}
+#sec-blog .search-results {
+    @apply text-rua-1;
+}
+
+
+.blog-wrap .action {
+    @apply pt-10 text-center;
+}
+
+
+.grid-posts {
+    /* @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-1 sm:grid-rows-5 lg:grid-rows-3 gap-4; */
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.grid-posts li .img-post {
+    @apply overflow-hidden rounded relative w-full pb-[75%];
+}
+.grid-posts li .img-post img {
+    @apply w-full h-full absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+    object-fit: cover;
+}
+
+
+.grid-posts li .info-post {
+    @apply px-4 py-5;
+}
+.grid-posts li .info-post h3 {
+    @apply font-rua-txt font-bold text-rua-1 text-xl pb-2;
+}
+.grid-posts li .info-post p {
+    @apply font-rua-txt text-rua-1 text-sm;
+}
+
+
+.grid-posts li:after {
+    @apply z-[1] bg-rua-4 shadow-md;
+}
+.grid-posts li:before {
+    @apply z-[2] bg-[url("../imgs/wave-bg-pink.png")] bg-[length:220px] shadow-rua-1;
+}
+
+.grid-posts li:hover:after {
+    @apply bg-rua-2 shadow-2xl;
+}
+.grid-posts li:hover:before {
+    @apply shadow-rua-1;
+}
+
+
+
+/* SIMGLE  */
+
+.blog-post,
+.loja-post {
+    @apply px-3 md:px-5;
+    /* @apply max-w-[1400px] mx-auto min-h-[calc(100vh-234px)]; */
+}
+
+.blog-post > .grid-modal,
+.loja-post > .grid-modal {
+    /* @apply p-0 pt-10; */
+    @apply max-w-[1400px] mx-auto min-h-[calc(100vh-234px)] px-0;
+}
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU SOBRE */
+
+#sec-sobre {
+    @apply bg-rua-1;
+    background-image: url("../imgs/wave-bg-pink.png");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+#sec-sobre .grid-content > .col-a {
+    @apply w-full lg:w-[calc(50%-20px)];
+}
+#sec-sobre  .grid-content > .col-b {
+    @apply w-full lg:w-[calc(50%-20px)];
+}
+
+#sec-sobre .sec-img {
+    @apply flex items-center justify-center px-10;
+}
+#sec-sobre .sec-img img {
+    @apply max-w-[50%] min-w-[300px];
+}
+
+#sec-sobre .wrap header,
+#sec-sobre .grid-ttl {
+    @apply text-rua-4;
+}
+
+
+.wrap-servicos > header {
+    @apply pt-30 pb-10;
+}
+
+#sec-sobre .grid-ttl {
+    @apply text-center;
+}
+
+
+/* ----- ----- ----- grid com os serviços */
+
+.grid-servicos {
+    @apply text-rua-1;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+
+.grid-servicos a {
+    @apply p-5 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left min-h-full;
+}
+
+
+.grid-servicos .servico-info h3 {
+    @apply font-rua-txt font-bold text-xl pb-3;
+}
+.grid-servicos .servico-info p {
+    @apply font-rua-txt text-sm;
+}
+
+
+.grid-servicos .servico-icon i,
+.grid-servicos .servico-icon svg {
+    @apply text-6xl;
+}
+
+
+.grid-servicos li:after {
+    @apply z-[1] bg-rua-4;
+}
+.grid-servicos li:before {
+    @apply z-[2] bg-[url("../imgs/wave-bg-gold-servicos.png")] bg-[length:220px];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// MENU CONTATO */
+
+.wrap > header {
+    @apply text-rua-1;
+}
+
+#sec-contato .grid-content > .col-a {
+    @apply w-full lg:w-[calc(45%-20px)] xl:w-[calc(35%-20px)];
+}
+#sec-contato  .grid-content > .col-b {
+    @apply w-full lg:w-[calc(55%-20px)] xl:w-[calc(65%-20px)];
+}
+
+
+
+
+/* ----- ----- ----- lista de formas de contato */
+
+.contact-list li:not(:last-child) {
+    @apply pb-3;
+}
+
+.contact-list a {
+    @apply font-rua-txt font-semibold text-lg text-rua-1;
+}
+
+.contact-list a i {
+    @apply mr-2.5 text-xl;
+}
+
+.contact-list a:hover i {
+    @apply text-rua-3 transition duration-300;
+}
+
+
+
+
+/* ----- ----- ----- lista de redes sociais */
+
+.social-list {
+    @apply flex gap-5 pt-10;
+}
+
+.social-list a {
+    @apply text-4xl leading-[100%] text-rua-1 block;
+    @apply hover:text-rua-3 transition duration-300;
+}
+
+
+
+
+/* ----- ----- ----- grid de contatos cadastrados */
+
+.grid-contato li a {
+    @apply block text-center p-10;
+}
+.grid-contato li:not(:last-child) {
+    @apply mb-5;
+}
+
+.grid-contato li span {
+    @apply font-rua-tt text-2xl text-rua-4;
+}
+
+.grid-contato li a i,
+.grid-contato li a svg {
+    @apply text-4xl text-rua-4 mr-5;
+}
+
+
+.grid-contato li:before {
+    @apply z-[2] bg-[url("../imgs/wave-bg-gold-lojas.png")] bg-[length:220px];
+}
+.grid-contato li:after {
+    @apply z-[1] bg-rua-1;
+}
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// FOOTER */
+
+#main-footer {
+    @apply bg-rua-1 px-3 md:px-5 py-10;
+    background-image: url("../imgs/wave-bg-white-page.png");
+    background-size: 470px;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+#main-footer p {
+    @apply font-rua-txt text-rua-4 text-xs text-center tracking-wide;
+}
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////// ERRO */
+
+.p404 {
+    @apply min-h-[calc(100vh-234px)] px-3 md:px-5 flex justify-center items-center;
+}
+
+.p404 .wrapper {
+    /* @apply max-w-[1400px] mx-auto pt-10 text-center; */
+    @apply max-w-[1400px] mx-auto text-center -mt-[5rem];
+}
+
+.p404 h1 {
+    @apply font-rua-tt text-rua-1 text-9xl sm:text-[11rem] leading-[100%];
+}
+
+.p404 p {
+    @apply font-rua-txt font-bold text-rua-1 text-xl;
+}
